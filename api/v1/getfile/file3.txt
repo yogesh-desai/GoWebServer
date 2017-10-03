@@ -1,0 +1,7 @@
+Hello.
+
+It's a toy example of Web Server. Many modifications can be done.
+Few of them are as follows,
+1. Use html/template.
+2. Make use of more libraries.
+3. Handle many files.
