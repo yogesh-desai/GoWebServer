@@ -33,7 +33,7 @@ $ go run main.go
 ```
 
 
-##ToDo's
+## ToDo's
 
 Many things can be done. This is just the basic example.
 Please feel free to generate pull requests or issues. :)
