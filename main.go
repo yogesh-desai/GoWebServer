@@ -14,7 +14,6 @@
 Basically we have handler to check the dir location of api/v1/getfile.
 Many ToDo yet to be implemented.
 
-
 To run please visit URL:
 go run main.go and then open any one URL in browser window.
 
@@ -70,7 +69,6 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", p.Title, p.Body)
 }
-
 
 func main() {
 
