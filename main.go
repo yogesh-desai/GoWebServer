@@ -26,6 +26,7 @@ package main
 import(
 
 	"fmt"
+	"strings"
 	"io/ioutil"
 	"net/http"
 	
@@ -67,12 +68,11 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error() + strErr , http.StatusNotFound)
 		return
 	}
-	fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", p.Title, p.Body)
+	fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", strings.TrimPrefix(p.Title, "api/v1/getfile/"), p.Body)
 }
 
 func main() {
 
-	//	http.HandleFunc("/api/v1/getfile/", apiHandler)
 	http.HandleFunc("/", apiHandler)
 	http.ListenAndServe(":8080", nil)
 
