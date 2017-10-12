@@ -87,8 +87,8 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 
 		// For Downloading the file
 		w.Header().Add("Content-Disposition", "Attachment;" + fileName)
-		w.Header().Set("Content-Type", r.Header.Get("Content-Type"))
-		w.Header().Set("Content-Length", r.Header.Get("Content-Length"))
+		// w.Header().Set("Content-Type", r.Header.Get("Content-Type"))
+		// w.Header().Set("Content-Length", r.Header.Get("Content-Length"))
 		
 		http.ServeFile(w, r, title)
 	}
