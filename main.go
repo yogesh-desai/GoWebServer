@@ -80,7 +80,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", strings.TrimPrefix(p.Title, "api/v1/getfile/"), p.Body)
-	
+
 	case strings.HasSuffix(title, ".avi"):
 
 		fileName	:= strings.TrimPrefix(title, "api/v1/getfile/")
